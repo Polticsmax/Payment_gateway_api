@@ -425,24 +425,3 @@ You can also test the API using curl or any HTTP client:
 ## 🚨 Security Notes
 
 - Change the default `SECRET_KEY` in production
-- Use strong passwords
-- Configure CORS properly for production
-- Use HTTPS in production
-- Store sensitive data securely
-- Implement rate limiting for production use
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📞 Support
-
-For support, please open an issue in the repository or contact the development team.
