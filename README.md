@@ -424,4 +424,4 @@ You can also test the API using curl or any HTTP client:
 
 ## 🚨 Security Notes
 
-- Change the default `SECRET_KEY` in production
+- Change the default `SECRET_KEY` 
