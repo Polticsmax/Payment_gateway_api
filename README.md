@@ -390,7 +390,8 @@ python3 run.py
 python3 test_swagger.py
 ```
 
-Then visit http://localhost:8000/docs to:
+Then visit http://localhost:8000/docs &
+           http://localhost:8000/test_frontend.html to:
 - View interactive API documentation
 - Test endpoints directly from the browser
 - Use the "Try it out" feature
