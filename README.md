@@ -45,7 +45,7 @@ cp env.example .env
 python run.py
 ```
 
-The API will be available at `http://localhost:8001` (or the port specified in your .env file)
+The API will be available at `http://localhost:8000` (or the port specified in your .env file)
 
 ## 🛠️ Detailed Installation
 
@@ -120,9 +120,9 @@ python run.py
 ```
 
 ### Step 7: Verify Installation
-- **API Documentation**: http://localhost:8001/docs
-- **Health Check**: http://localhost:8001/health
-- **Alternative Docs**: http://localhost:8001/redoc
+- **API Documentation**: http://localhost:8000/docs
+- **Health Check**: http://localhost:8000/health
+- **Alternative Docs**: http://localhost:8000/redoc
 
 ## 🖥️ Terminal Commands Reference
 
@@ -142,10 +142,10 @@ python test_razorpay.py
 python test_api.py
 
 # Check server status
-curl http://localhost:8001/health
+curl http://localhost:8000/health
 
 # Check database status
-curl http://localhost:8001/db-status
+curl http://localhost:8000/db-status
 ```
 
 ### Virtual Environment Management
@@ -196,10 +196,10 @@ sed -i '' 's/PORT=8001/PORT=8002/' .env
 The API includes comprehensive Swagger/OpenAPI documentation with interactive features:
 
 ### Documentation URLs
-- **Swagger UI**: http://localhost:8001/docs - Interactive API documentation with "Try it out" feature
-- **ReDoc**: http://localhost:8001/redoc - Alternative documentation view
-- **OpenAPI JSON**: http://localhost:8001/openapi.json - Raw OpenAPI specification
-- **Root Page**: http://localhost:8001/ - API overview and quick links
+- **Swagger UI**: http://localhost:8000/docs - Interactive API documentation with "Try it out" feature
+- **ReDoc**: http://localhost:8000/redoc - Alternative documentation view
+- **OpenAPI JSON**: http://localhost:8000/openapi.json - Raw OpenAPI specification
+- **Root Page**: http://localhost:8000/ - API overview and quick links
 
 ### Swagger Features
 - ✅ **Interactive Testing**: Try endpoints directly from the documentation
@@ -220,7 +220,7 @@ The API includes comprehensive Swagger/OpenAPI documentation with interactive fe
 
 ### Sign Up
 ```http
-POST http://localhost:8001/auth/signup
+POST http://localhost:8000/auth/signup
 Content-Type: application/json
 
 {
@@ -232,7 +232,7 @@ Content-Type: application/json
 
 ### Sign In
 ```http
-POST http://localhost:8001/auth/signin
+POST http://localhost:8000/auth/signin
 Content-Type: application/json
 
 {
@@ -243,13 +243,13 @@ Content-Type: application/json
 
 ### Get Profile (Protected)
 ```http
-GET http://localhost:8001/auth/profile
+GET http://localhost:8000/auth/profile
 Authorization: Bearer <your-jwt-token>
 ```
 
 ### Sign Out
 ```http
-POST http://localhost:8001/auth/signout
+POST http://localhost:8000/auth/signout
 Authorization: Bearer <your-jwt-token>
 ```
 
@@ -257,7 +257,7 @@ Authorization: Bearer <your-jwt-token>
 
 ### Create Payment (Protected)
 ```http
-POST http://localhost:8001/payments/create-payment
+POST http://localhost:8000/payments/create-payment
 Authorization: Bearer <your-jwt-token>
 Content-Type: application/json
 
@@ -270,7 +270,7 @@ Content-Type: application/json
 
 ### Verify Payment (Protected)
 ```http
-POST http://localhost:8001/payments/verify-payment
+POST http://localhost:8000/payments/verify-payment
 Authorization: Bearer <your-jwt-token>
 Content-Type: application/json
 
@@ -283,7 +283,7 @@ Content-Type: application/json
 
 ### Get My Payments (Protected)
 ```http
-GET http://localhost:8001/payments/my-payments
+GET http://localhost:8000/payments/my-payments
 Authorization: Bearer <your-jwt-token>
 ```
 
@@ -390,7 +390,7 @@ python3 run.py
 python3 test_swagger.py
 ```
 
-Then visit http://localhost:8001/docs to:
+Then visit http://localhost:8000/docs to:
 - View interactive API documentation
 - Test endpoints directly from the browser
 - Use the "Try it out" feature
@@ -402,21 +402,21 @@ You can also test the API using curl or any HTTP client:
 
 1. **Sign up a new user**
    ```bash
-   curl -X POST "http://localhost:8001/auth/signup" \
+   curl -X POST "http://localhost:8000/auth/signup" \
         -H "Content-Type: application/json" \
         -d '{"email":"test@example.com","full_name":"Test User","password":"password123"}'
    ```
 
 2. **Sign in to get token**
    ```bash
-   curl -X POST "http://localhost:8001/auth/signin" \
+   curl -X POST "http://localhost:8000/auth/signin" \
         -H "Content-Type: application/json" \
         -d '{"email":"test@example.com","password":"password123"}'
    ```
 
 3. **Create a payment**
    ```bash
-   curl -X POST "http://localhost:8001/payments/create-payment" \
+   curl -X POST "http://localhost:8000/payments/create-payment" \
         -H "Authorization: Bearer YOUR_JWT_TOKEN" \
         -H "Content-Type: application/json" \
         -d '{"amount":1000.00,"currency":"INR","description":"Test payment"}'
