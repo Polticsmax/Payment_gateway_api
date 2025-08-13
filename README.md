@@ -94,7 +94,7 @@ RAZORPAY_KEY_SECRET=your-razorpay-test-key-secret
 
 # Server Configuration
 HOST=0.0.0.0
-PORT=8001
+PORT=8000
 ```
 
 ### Step 5: Start MongoDB
